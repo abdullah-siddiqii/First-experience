@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(16, 12, 8, 0.95); 
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f5f5;
+}
+
+
+.container {
+  max-width: 340px;
+  margin: 60px auto;
+  padding: 24px;
+  text-align: center;
+  background: #f7ecec;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
+h2 {
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #131212;
+  position:inline;
+  height: 100%;
+}
+
+p {
+  font-size: 15px;
+  color: #221d1d;
+  margin: 10px 0 0;
+}
+
+
+.error {
+  margin: 12px 0;
+  color: #ff6b6b;
+  font-size: 14px;
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+
+.controls button {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.controls button:hover {
+  background-color: #4a4a4a;
+  transform: scale(1.05);
+}
+
+
+.count {
+  font-size: 24px;
+  font-weight: bold;
+  min-width: 48px;
+  display: inline-block;
+  color: #010101;
+}
+
+
+.status {
+  margin-top: 14px;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  color: black;
+}
+
+.all-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+
+}
