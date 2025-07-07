@@ -1,5 +1,2 @@
-name = "First-experience"
-type = "javascript"
-compatibility_date = "2025-07-07"
-nodejs_compat = true
-workers_dev = true
+compatibility_flags = [ "nodejs_compat" ]
+compatibility_date = "2024-09-23"
