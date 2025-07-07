@@ -119,8 +119,18 @@ p {
 .total-price h2 {
   font-size: 30px;
   font-weight: bold;
-  color:wheat;
+  color:rgb(246, 246, 246);
   margin-top: 20px;
   float: right;
   margin-right: 20px;
+}
+.clear-button{
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease
 }

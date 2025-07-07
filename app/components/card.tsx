@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 type HomeProps = {
@@ -10,6 +10,7 @@ type HomeProps = {
   price: number;
   targetCount?: number;
   onTotalChange?: (change: number) => void;
+  reset?: boolean;
 };
 
 export default function Home({
@@ -19,16 +20,26 @@ export default function Home({
   price,
   targetCount = 5,
   onTotalChange,
+  reset,
 }: HomeProps) {
   const [count, setCount] = useState(0);
 
-  const increment = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-    if (onTotalChange) onTotalChange(price);
-    if (newCount === targetCount) {
-      toast.success("You have enough!");
+  useEffect(() => {
+    if (reset && count > 0) {
+      setCount(0); 
+      toast.success(`${title} cleared!`);
     }
+  }, [reset]);
+
+  const increment = () => {
+    setCount((prev) => {
+      const newCount = prev + 1;
+      if (onTotalChange) onTotalChange(price);
+      if (newCount === targetCount) {
+        toast.success("You have enough!");
+      }
+      return newCount;
+    });
   };
 
   const decrement = () => {
@@ -36,8 +47,10 @@ export default function Home({
       toast.error("Cannot go below 0!");
       return;
     }
-    setCount(count - 1);
-    if (onTotalChange) onTotalChange(-price);
+    setCount((prev) => {
+      if (onTotalChange) onTotalChange(-price);
+      return prev - 1;
+    });
   };
 
   const total = count * price;
