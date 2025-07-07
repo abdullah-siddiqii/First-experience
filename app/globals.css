@@ -117,8 +117,10 @@ p {
   color: #131212;
 }
 .total-price h2 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   color:wheat;
   margin-top: 20px;
+  float: right;
+  margin-right: 20px;
 }

@@ -42,6 +42,34 @@ export default function Page() {
           price={20}
           onTotalChange={handleTotalChange}
         />
+               <Home
+          image="https://demo-source.imgix.net/group_photo.jpg"
+          title="Premium Group"
+          description="For Group Lovers"
+          price={10}
+          onTotalChange={handleTotalChange}
+        />
+               <Home
+          image="https://demo-source.imgix.net/puppy.jpg"
+          title="Premium Pet"
+          description="For Dog Lovers"
+          price={10}
+          onTotalChange={handleTotalChange}
+        />
+                   <Home
+          image="https://demo-source.imgix.net/canyon.jpg"
+          title="Premium Hills"
+          description="For Hills Lovers"
+          price={17}
+          onTotalChange={handleTotalChange}
+        />
+                      <Home
+          image="https://demo-source.imgix.net/scooter.jpg"
+          title="Premium Motors"
+          description="For Scooter Lovers"
+          price={10}
+          onTotalChange={handleTotalChange}
+        />
       </div>
 
       <div className="total-price">
