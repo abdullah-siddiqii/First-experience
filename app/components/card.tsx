@@ -7,20 +7,25 @@ type HomeProps = {
   image: string;
   title: string;
   description: string;
+  price: number;
   targetCount?: number;
+  onTotalChange?: (change: number) => void;
 };
 
 export default function Home({
   image,
   title,
   description,
+  price,
   targetCount = 5,
+  onTotalChange,
 }: HomeProps) {
   const [count, setCount] = useState(0);
 
   const increment = () => {
     const newCount = count + 1;
     setCount(newCount);
+    if (onTotalChange) onTotalChange(price);
     if (newCount === targetCount) {
       toast.success("You have enough!");
     }
@@ -32,13 +37,17 @@ export default function Home({
       return;
     }
     setCount(count - 1);
+    if (onTotalChange) onTotalChange(-price);
   };
+
+  const total = count * price;
 
   return (
     <div className="container">
       <img src={image} alt={title} className="image" />
       <h2>{title}</h2>
       <p>{description}</p>
+      <p>Price: ${price}</p>
 
       <div className="controls">
         <button onClick={decrement}>-</button>
@@ -48,6 +57,10 @@ export default function Home({
 
       <div className="status">
         {count >= targetCount ? "✅ Enough" : "❌ Not enough"}
+      </div>
+
+      <div className="card-total">
+        <strong>Total for this item: ${total}</strong>
       </div>
     </div>
   );
