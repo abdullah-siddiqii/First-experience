@@ -42,6 +42,7 @@ export default function Page() {
           price={20}
           onTotalChange={handleTotalChange}
         />
+
                <Home
           image="https://demo-source.imgix.net/group_photo.jpg"
           title="Premium Group"
@@ -73,7 +74,7 @@ export default function Page() {
       </div>
 
       <div className="total-price">
-        <h2>Grand Total: ${total}</h2>
+        <h2>Grand Total: PKR {total}</h2>
       </div>
     </div>
   );

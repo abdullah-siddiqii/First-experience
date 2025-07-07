@@ -47,7 +47,7 @@ export default function Home({
       <img src={image} alt={title} className="image" />
       <h2>{title}</h2>
       <p>{description}</p>
-      <p>Price: ${price}</p>
+      <p>Price: PKR {price}</p>
 
       <div className="controls">
         <button onClick={decrement}>-</button>
@@ -60,7 +60,7 @@ export default function Home({
       </div>
 
       <div className="card-total">
-        <strong>Total for this item: ${total}</strong>
+        <strong>Total for this item: PKR {total}</strong>
       </div>
     </div>
   );
