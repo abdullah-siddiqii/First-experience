@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Home from "./components/card";
 import "./globals.css";
-
+import Image from "next/image";
 export default function Page() {
   const [total, setTotal] = useState(0);
   const [resetAll, setResetAll] = useState(false); 
@@ -20,7 +20,10 @@ export default function Page() {
 
   return (
     <div>
+<div className="Header">
+ <div className="Imageh"><Image src="/me.png" alt="" width={50} height={50} style={{ borderRadius: "50%" }} /></div>
 
+    <h1>SIDDIQUI STORES</h1></div>
       <div className="all-cards">
         <Home
           image="https://demo-source.imgix.net/snowboard.jpg"
@@ -88,7 +91,7 @@ export default function Page() {
         />
       </div>
       <div className="total-price">
-        <h2>Grand Total: PKR {total}</h2>
+        <h2>Grand Total: <span>PKR {total}</span> </h2>
         <button onClick={clearAll} className="clear-button">
           Clear All
         </button>

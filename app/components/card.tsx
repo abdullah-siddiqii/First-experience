@@ -56,11 +56,13 @@ export default function Home({
   const total = count * price;
 
   return (
+    
     <div className="container">
       <img src={image} alt={title} className="image" />
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>Price: PKR {price}</p>
+      <h2 className="title">{title}</h2>
+      <p className="description">{description}</p>
+      <p className="price">Price: <span>PKR {price}</span> </p>
+
 
       <div className="controls">
         <button onClick={decrement}>-</button>

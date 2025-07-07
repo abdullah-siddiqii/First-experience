@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 1.5rem;
   box-sizing: border-box;
-  background-color: rgba(16, 12, 8, 0.95); 
+  background-color: rgba(16, 12, 8, 0.95);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #f5f5f5;
 }
@@ -11,7 +11,7 @@ body {
 .container {
   max-width: 340px;
   /* margin: 60px auto; */
-  padding: 24px ;
+  padding: 24px;
   text-align: center;
   background: #f7ecec;
   border-radius: 14px;
@@ -34,12 +34,13 @@ body {
   aspect-ratio: 1.5 / 1;
   object-fit: cover;
 }
+
 h2 {
   margin-top: 18px;
   font-size: 22px;
   font-weight: 600;
   color: #131212;
-  position:inline;
+  position: inline;
   height: 100%;
 }
 
@@ -105,32 +106,76 @@ p {
   color: black;
 }
 
-.all-cards{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+.all-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 
 }
-.card-total{
+
+.card-total {
 
   font-weight: bold;
   color: #131212;
+
 }
+
 .total-price h2 {
   font-size: 30px;
   font-weight: bold;
-  color:rgb(246, 246, 246);
+  color: rgb(246, 246, 246);
   margin-top: 20px;
   float: right;
-  margin-right: 20px;
+  margin-right: 7px;
+    margin-bottom: 2rem;
 }
-.clear-button{
+
+.clear-button {
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+  font-size: 1rem;
   margin-top: 1rem;
   padding: 10px 20px;
   background-color: #ff6b6b;
-  color: white;
+  color: rgb(32, 28, 28);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  background: #833AB4;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  color: white;
+}
+.clear-button:hover{
+  background: #833AB4;
+  background: linear-gradient(90deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 50%,  rgba(131, 58, 180, 1) 100%);
+  box-shadow: 0 0 9px white;
+}
+.total-price span{
+  color: green;
+  font-weight: bold;
+}
+.price span{
+   color: green;
+  font-weight: bold;
+}
+.description{
+  color: #010101;
+}
+.tiltle{
+  color: #010101;
+}
+.Header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.Header h1{
+  margin-left: 1rem;
+
 }
