@@ -61,7 +61,7 @@ export default function Home({
       <img src={image} alt={title} className="image" />
       <h2 className="title">{title}</h2>
       <p className="description">{description}</p>
-      <p className="price">Price: <span>PKR {price}</span> </p>
+      <p className="price">Price: <span>PKR {price.toLocaleString()}</span> </p>
 
 
       <div className="controls">
@@ -75,7 +75,7 @@ export default function Home({
       </div>
 
       <div className="card-total">
-        <strong>Total for this item: PKR {total}</strong>
+        <strong>Total for this item: PKR {total.toLocaleString()}</strong>
       </div>
     </div>
   );

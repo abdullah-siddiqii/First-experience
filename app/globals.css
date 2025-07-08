@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  padding: 1.5rem;
   box-sizing: border-box;
- background: linear-gradient(90deg, rgb(13, 13, 41) 43%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 53%);;
+ background: linear-gradient(90deg, rgb(13, 13, 41) 43%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 53%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #f5f5f5;
 }
@@ -120,43 +119,44 @@ p {
   font-weight: bold;
   color: #131212;
 
+
+}
+.total-price {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  width: fit-content;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .total-price h2 {
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(246, 246, 246);
-  margin-top: 20px;
-  float: right;
-  margin-right: 7px;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
+.total-price span {
+  color: #00e676;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
 .clear-button {
-  width: 10rem;
-  height: 3rem;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #ff6b6b;
-  color: rgb(32, 28, 28);
+  background-color: #ff4d4f;
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  background: #833AB4;
-  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-  color: white;
+  transition: background-color 0.3s ease;
 }
-.clear-button:hover{
-  background: #833AB4;
-  background: linear-gradient(90deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 50%,  rgba(131, 58, 180, 1) 100%);
-  box-shadow: 0 0 9px white;
-}
-.total-price span{
-  color: green;
-  font-weight: bold;
+
+.clear-button:hover {
+  background-color: #d9363e;
 }
 .price span{
    color: green;
@@ -168,14 +168,306 @@ p {
 .tiltle{
   color: #010101;
 }
-.Header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.Navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, rgba(48, 48, 153, 0.9) 0%, rgba(29, 29, 63, 0.95) 50%, rgba(95, 226, 252, 0.9) 100%);
+  padding: 7px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  border-radius: 1rem;
 }
 
-.Header h1{
-  margin-left: 1rem;
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.Imageh {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Imageh h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f8f4f4;
+  letter-spacing: 0.5px;
+}
+
+.Buttons button {
+  margin-left: 12px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  background-color: #0070f3;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Buttons button:hover {
+  background-color: #0051c6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
+}
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.ModalContent {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  text-align: center;
+}
+
+.ModalContent h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.ModalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.ModalContent input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.ModalContent button[type="submit"] {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ModalContent button[type="submit"]:hover {
+  background-color: #0051c6;
+}
+
+.CloseBtn {
+  margin-top: 1rem;
+  background-color: #f3f3f3;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.CloseBtn:hover {
+  background-color: #ddd;
+}
+
+.footer {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+.footer-bottom p{
+  color: white;
+  cursor: pointer;
+}
+.Social{
+  display: flex;
+  align-items: center;
+}
+.Social svg{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.Social a{
+  margin-left: 1rem;
+  color: #0070f3;
+}
+
+.Social a:hover{
+  color: #9c036cf3;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .Navbar {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .Header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .Buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Buttons button {
+    margin: 6px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    text-align: center;
+  }
+
+  .ModalContent {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .total-price {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    width: 90%;
+  }
+
+  .total-price h2 {
+    font-size: 1.5rem;
+  }
+
+  .total-price span {
+    font-size: 1.8rem;
+  }
+
+  .clear-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .Imageh h1 {
+    font-size: 1.3rem;
+  }
+
+  .Social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    padding: 24px 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 400px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .total-price {
+    max-width: 600px;
+  }
+  .Social {
+    display: flex;
+  }
 }
